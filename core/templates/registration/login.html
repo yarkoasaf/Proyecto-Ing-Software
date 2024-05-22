@@ -27,15 +27,12 @@
 
                             {% csrf_token %}
                             
-                            <div class="mb-3">
-                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electronico*" aria-describedby="emailHelp">
-                            </div>
+                            {{ form }}
 
-                            <div class="mb-3">
-                              <input type="password" class="form-control" id="exampleInputPassword1"  placeholder="Contraseña*">
-                            </div>
+                            <br>
 
-                            <button type="button" class="btn btn-outline-warning w-100">Iniciar sesión</button>
+                            <button type="submit" class="btn btn-outline-warning w-100">Iniciar sesión</button>
+
                         </form>
 
                         <br>

@@ -10,43 +10,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
 </head>
 <body id="fondo" class="d-flex justify-content-center align-items-center vh-100">
-    <div class="container2">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
                 <div class="card text-center">
                     <div class="card-body">
+
                         <h3>Registro de Usuario</h3>
                         <hr>
                         <img src=" {% static 'core/img/logo_SCHOLAR_FLAME.jpg' %} " class="card-img-top" alt="logo-login">
-                        <form id="form-validation" novalidate>
-                            <div class="form-group">
-                                <span>Nombre</span>
-                                <input type="text" placeholder="Ingrese Nombre" required>
-                                <small>Por favor ingrese Nombre</small>
-                            </div>
-                            <div class="form-group">
-                                <span>Usuario</span>
-                                <input type="text" placeholder="Ingrese Usuario" required>
-                                <small>Por favor ingrese Usuario</small>
-                            </div>
-                            <div class="form-group">
-                                <span>Email</span>
-                                <input type="email" placeholder="Ingrese Email" required>
-                                <small>Por favor ingrese Email</small>
-                            </div>
-                            <div class="form-group">
-                                <span>Contraseña</span>
-                                <input type="password" placeholder="Ingrese Contraseña" required>
-                                <small>Por favor ingrese Contraseña</small>
-                            </div>
-                            <div class="form-group">
-                                <span>Confirme Contraseña</span>
-                                <input type="password" placeholder="Confirme Contraseña" required>
-                                <small>Por favor ingrese Contraseña</small>
-                            </div>
-                            <div class="button">
-                                <input type="submit" value="Registrarse">
-                            </div>
+
+                        <form class="form-login mx-auto">
+
+                            {% csrf_token %}
+
+                            {{ form }}
+
+                            <br>
+
+                            <button type="submit" class="btn btn-outline-warning w-100">Registrarse</button>
+                            
                         </form>
                         
                     </div>
@@ -54,18 +37,8 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script>
-        const addForm = document.getElementById
-        ("form-validation");
-        addForm.addEventListener("submit", (e)=>{
-           if(addForm.checkValidity() ===false){
-            e.preventDefault();
-            e.stopPropagation();
-            addForm.classList.add('was-validate');
-            return false
-           } 
-        })
-    </script>
 </body>
+
 </html>
