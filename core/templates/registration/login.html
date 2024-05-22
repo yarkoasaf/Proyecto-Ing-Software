@@ -23,7 +23,9 @@
                         <h4>¡Bienvenido!</h4>
                         <p>Ingresa tu usuario y contraseña para iniciar sesión</p>
 
-                        <form class="form-login mx-auto">
+                        <form class="form-login mx-auto" method="post">
+
+                            {% csrf_token %}
 
                             <div class="mb-3 text-center">
                               <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electronico*" aria-describedby="emailHelp">
