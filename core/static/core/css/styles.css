@@ -30,3 +30,8 @@ html, body {
 .card-img-top{
     max-width: 14vh;
 }
+
+.form-login{
+    max-width: 40vh;
+    text-align: center;
+}
