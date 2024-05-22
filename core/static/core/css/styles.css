@@ -2,3 +2,27 @@
     margin:0;
     padding:0;
 }
+.logo {
+    max-width: 10vh;
+    height: auto;
+}
+
+.custom-navbar{
+    background-color: #0C252C;
+}
+
+.custom-footer {
+    background-color: #0C252C;
+    color: #fff !important;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+html, body {
+    height: 100%;
+}
