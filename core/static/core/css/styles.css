@@ -41,10 +41,15 @@ small{
 
 .form-login{
     max-width: 40vh;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0,3s ease;
     text-align: center;
 }
 
-.container form{
+.container2 form{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -63,6 +68,17 @@ form span{
 }
 
 .form-group input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #e85c04;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0,3s ease;
+}
+
+.form-login input{
     height: 40px;
     width: 100%;
     outline: none;

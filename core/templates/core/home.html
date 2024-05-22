@@ -25,9 +25,24 @@
             </ul>
             
             <ul class="navbar-nav">
+                
+                {% if user.is_authenticated %}
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Iniciar Sesión/Registrarse</a>
+                    <a class="nav-link" href=" {% url 'logout' %} ">cerrar sesión</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> {{ user.username }} </a>
+                </li>
+
+                {% else %}
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" {% url 'login' %} ">Iniciar sesión</a>
+                </li>
+
+                {% endif %}
             </ul>
         </div>
     </div>
